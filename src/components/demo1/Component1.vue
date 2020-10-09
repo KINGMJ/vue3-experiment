@@ -1,33 +1,33 @@
 <template>
-  <div>
-    <div>Count is: {{ countState.value }}, double is:</div>
-    <button @click="increment" />
-  </div>
+  <div>Count is: {{ state.count }}, double is: {{ state.double }}</div>
+  <button @click="increment">+</button>
 </template>
 
-<script lang="ts">
-import { reactive, defineComponent } from "vue";
-// eslint-disable-next-line no-unused-vars
-import { Count } from "@/types/count";
+<script>
+import { reactive, computed, defineComponent } from "vue";
 
 export default defineComponent({
   name: "Component1",
   setup() {
-    const countState = reactive<Count>({
-      name: "计数",
-      value: 0,
+    const state = reactive({
+      count: 0,
+      double: computed(() => state.count * 2),
     });
-    //double: computed(() => count.value * 2),
 
-    // const increment = function (): void {
-    //   countState.value++;
-    // };
+    const increment = () => {
+      state.count++;
+    };
 
     return {
-      countState,
-      // increment,
+      state,
+      increment,
     };
   },
 });
 </script>
 
+<!--
+1. vue3 支持 multi-root 节点
+2. 使用 defineComponent 来定义组件
+3. 使用 Reactive 
+-->
