@@ -2,10 +2,8 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h3>第一组demo</h3>
-    <ul>
-      <li><a href="#/demo1" rel="noopener">demo1</a></li>
-      <li><a href="#/demo2" rel="noopener">demo2</a></li>
-    </ul>
+    <a href="#/demo1" rel="noopener">defineComponent、reactive与ref的使用</a>
+    <a href="#/demo2" rel="noopener">reactive与toRefs</a>
     <h3>Essential Links</h3>
     <ul>
       <li>
@@ -93,5 +91,7 @@ li {
 }
 a {
   color: #42b983;
+  display: block;
+  margin: 12px 0;
 }
 </style>
