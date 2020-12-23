@@ -2,10 +2,10 @@
   <div>Test for setup</div>
 </template>
 
-<script>
-import { onMounted, toRefs } from "vue";
+<script lang="ts">
+import { defineComponent } from "vue";
 
-export default {
+export default defineComponent({
   name: "Component3",
   props: {
     title: String,
@@ -13,15 +13,10 @@ export default {
 
   setup(props) {
     console.log(props.title);
-    onMounted(() => {
-      console.log("mounted");
-      const { title } = toRefs(props);
-      console.log(title.value);
-    });
   },
-};
+});
 </script>
 
 <!--
-1. 使用 ref，需要用 .value 访问包装过的对象值
+1. ts中，需要使用 defineComponent 来对 props 进行类型推导
 -->

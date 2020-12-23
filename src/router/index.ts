@@ -4,6 +4,7 @@ import Demo1 from '../views/Demo1.vue'
 import Demo2 from '../views/Demo2.vue'
 import Demo3 from '../views/Demo3.vue'
 import Demo4 from '../views/Demo4.vue'
+import Demo5 from '../views/Demo5.vue'
 
 const routes = [
   {
@@ -38,6 +39,11 @@ const routes = [
     path: '/demo4',
     name: 'Demo4',
     component: Demo4
+  },
+  {
+    path: '/demo5',
+    name: 'Demo5',
+    component: Demo5
   }
 ]
 

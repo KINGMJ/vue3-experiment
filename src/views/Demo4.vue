@@ -1,29 +1,22 @@
 <template>
-  <component-1 :name="name" :msg="msg" />
+  <component1 />
+  <component2 />
+  <component-3 title="组件3" />
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from "vue";
-import Component1 from "@/components/demo4/Component1.vue";
+import { Options, Vue } from "vue-class-component";
 
-export default defineComponent({
-  name: "Demo4",
+import Component1 from "../components/demo4/Component1.vue";
+import Component2 from "../components/demo4/Component2.vue";
+import Component3 from "../components/demo4/Component3.vue";
+
+@Options({
   components: {
     Component1,
+    Component2,
+    Component3,
   },
-  setup() {
-    const msg = ref(0);
-    const name = ref("测试组件");
-    return {
-      name,
-      msg,
-    };
-  },
-});
-
-/**
- * 1. https://cn.vuejs.org/v2/api/#vm-attrs
- * 2. 渲染函数的使用：https://cn.vuejs.org/v2/guide/render-function.html
- */
+})
+export default class Demo1 extends Vue {}
 </script>
-

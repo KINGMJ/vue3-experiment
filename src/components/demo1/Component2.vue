@@ -1,43 +1,27 @@
 <template>
-  <div>Count is: {{ count }}, double is: {{ double }}</div>
+  <div>Count is: {{ count }}</div>
   <button @click="increment">+</button>
 </template>
 
 <script lang="ts">
-import { ref, computed, watch, onMounted, defineComponent } from "vue";
+import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "Component2",
-  setup() {
-    //reactive state
-    const count = ref(0);
-    //computed state
-    const double = computed(() => count.value * 2);
-    //method
-    const increment = () => {
-      count.value++;
-    };
-    
-    watch(
-      () => count.value,
-      (val) => {
-        console.log(`count is ${val}`);
-      }
-    );
-    onMounted(() => {
-      console.log("mounted");
-      console.log(double.value);
-    });
-
+  data() {
     return {
-      count,
-      double,
-      increment,
+      count: 1,
     };
   },
+  methods: {
+    increment() {
+      this.count++;
+    },
+  },
 });
+
+/**
+ * 1. defineComponent 在 options 模式下的使用
+ */
 </script>
 
-<!--
-1. 使用 ref，需要用 .value 访问包装过的对象值
--->
