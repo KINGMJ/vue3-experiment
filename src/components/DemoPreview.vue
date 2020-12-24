@@ -6,6 +6,7 @@
     <a href="#/demo2" rel="noopener">reactive与toRefs</a>
     <a href="#/demo3" rel="noopener">setup函数返回渲染函数或JSX</a>
     <a href="#/demo4" rel="noopener">reactive与ref的使用</a>
+    <a href="#/demo5" rel="noopener">setup函数的使用</a>
   </div>
 </template>
 
