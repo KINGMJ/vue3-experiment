@@ -7,6 +7,8 @@
     <a href="#/demo3" rel="noopener">setup函数返回渲染函数或JSX</a>
     <a href="#/demo4" rel="noopener">reactive与ref的使用</a>
     <a href="#/demo5" rel="noopener">setup函数的使用</a>
+    <a href="#/demo6" rel="noopener">vue3生命周期钩子</a>
+    <a href="#/demo7" rel="noopener">keep-alive的onActived和onDeactived钩子</a>
   </div>
 </template>
 
