@@ -4,7 +4,7 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, watch, onMounted, defineComponent } from "vue";
+import { ref, computed, watch, defineComponent } from "vue";
 
 export default defineComponent({
   name: "Component2",
@@ -17,16 +17,19 @@ export default defineComponent({
     const increment = () => {
       count.value++;
     };
-    
-    watch(
-      () => count.value,
-      (val) => {
-        console.log(`count is ${val}`);
-      }
-    );
-    onMounted(() => {
-      console.log("mounted");
-      console.log(double.value);
+
+    // watch(
+    //   () => count.value,
+    //   (val, prevVal) => {
+    //     console.group("watch函数");
+    //     console.log(`count is ${val}`);
+    //     console.log(`prev count is ${prevVal}`);
+    //   }
+    // );
+    watch(count, (val, prevVal) => {
+      console.group("watch函数");
+      console.log(`count is ${val}`);
+      console.log(`prev count is ${prevVal}`);
     });
 
     return {
@@ -40,4 +43,5 @@ export default defineComponent({
 
 <!--
 1. 使用 ref，需要用 .value 访问包装过的对象值
+2. watch的两种用法，watching a getter 或者 watching a ref
 -->

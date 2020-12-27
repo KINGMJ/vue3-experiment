@@ -1,3 +1,6 @@
+<template>
+  <div></div>
+</template>
 <script>
 import { onMounted, toRefs } from "vue";
 
@@ -6,7 +9,7 @@ export default {
   props: {
     title: String,
   },
-  
+
   setup(props) {
     console.log(props.title);
     onMounted(() => {
