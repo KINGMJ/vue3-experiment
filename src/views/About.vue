@@ -1,17 +1,17 @@
 <template>
   <div class="about">
-    <demo-preview msg="Vue3 和 TypeScript 的尝试性 demo" />
+    <demo-preview msg="Vue3 示例" />
   </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
-import DemoPreview from "@/components/DemoPreview.vue";
+import { Options, Vue } from 'vue-class-component'
+import DemoPreview from '@/components/DemoPreview.vue'
 
 @Options({
   components: {
-    DemoPreview,
-  },
+    DemoPreview
+  }
 })
 export default class About extends Vue {}
 </script>

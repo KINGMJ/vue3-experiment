@@ -1,27 +1,28 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h3>第一组demo</h3>
-    <a href="#/demo1" rel="noopener">defineComponent的使用</a>
-    <a href="#/demo2" rel="noopener">reactive与toRefs</a>
-    <a href="#/demo3" rel="noopener">setup函数返回渲染函数或JSX</a>
-    <a href="#/demo4" rel="noopener">reactive与ref的使用</a>
-    <a href="#/demo5" rel="noopener">setup函数的使用</a>
-    <a href="#/demo6" rel="noopener">vue3生命周期钩子</a>
-    <a href="#/demo7" rel="noopener">keep-alive的onActived和onDeactived钩子</a>
+    <h3>Vue3 新特性</h3>
+    <a href="#/demo1">defineComponent的使用</a>
+    <a href="#/demo2">reactive与toRefs</a>
+    <a href="#/demo3">setup函数返回渲染函数或JSX</a>
+    <a href="#/demo4">reactive与ref的使用</a>
+    <a href="#/demo5">setup函数的使用</a>
+    <a href="#/demo6">vue3生命周期钩子</a>
+    <a href="#/demo7">keep-alive的onActived和onDeactived钩子</a>
+    <a href="#/demo8">teleport</a>
   </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
+import { Options, Vue } from 'vue-class-component'
 
 @Options({
   props: {
-    msg: String,
-  },
+    msg: String
+  }
 })
 export default class DemoPreview extends Vue {
-  msg!: string;
+  msg!: string
 }
 </script>
 
@@ -41,6 +42,7 @@ li {
 a {
   color: #42b983;
   display: block;
-  margin: 12px 0;
+  margin: 12px;
+  display: inline-block;
 }
 </style>
