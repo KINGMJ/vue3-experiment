@@ -10,6 +10,7 @@
     <a href="#/demo6">vue3生命周期钩子</a>
     <a href="#/demo7">keep-alive的onActived和onDeactived钩子</a>
     <a href="#/demo8">teleport</a>
+    <a href="#/demo9">fragments</a>
   </div>
 </template>
 
