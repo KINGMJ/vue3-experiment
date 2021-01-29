@@ -8,12 +8,15 @@
   <p>{{ searchText }}</p>
   <p>{{ pageTitle }}</p>
   <p>{{ pageContent }}</p>
+
+  <custom-input-4 v-model.capitalize="searchText" />
 </template>
 
 <script lang="ts">
 import CustomInput from '@/components/demo10/CustomInput.vue'
 import CustomInput2 from '@/components/demo10/CustomInput2.vue'
 import CustomInput3 from '@/components/demo10/CustomInput3.vue'
+import CustomInput4 from '@/components/demo10/CustomInput4.vue'
 
 import { defineComponent } from 'vue'
 export default defineComponent({
@@ -27,7 +30,8 @@ export default defineComponent({
   components: {
     CustomInput,
     CustomInput2,
-    CustomInput3
+    CustomInput3,
+    CustomInput4
   }
 })
 </script>
