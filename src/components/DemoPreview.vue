@@ -11,6 +11,8 @@
     <a href="#/demo7">keep-alive的onActived和onDeactived钩子</a>
     <a href="#/demo8">teleport</a>
     <a href="#/demo9">fragments</a>
+    <h3>功能变更</h3>
+    <a href="#/demo10">v-model</a>
   </div>
 </template>
 
@@ -45,5 +47,9 @@ a {
   display: block;
   margin: 12px;
   display: inline-block;
+}
+.hello {
+  width: 80%;
+  margin: 0 auto;
 }
 </style>
