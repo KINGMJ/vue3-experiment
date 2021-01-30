@@ -13,6 +13,7 @@
     <a href="#/demo9">fragments</a>
     <h3>功能变更</h3>
     <a href="#/demo10">v-model</a>
+    <a href="#/demo11">v-model修饰符</a>
   </div>
 </template>
 
