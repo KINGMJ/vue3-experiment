@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 
 // demo的个数
-const demoCount = 12
+const demoCount = 30
 let routes = [
   {
     path: '/',
