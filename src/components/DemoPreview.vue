@@ -15,6 +15,10 @@
     <a href="#/demo10">v-model</a>
     <a href="#/demo11">v-model修饰符</a>
     <a href="#/demo12">template v-for</a>
+    <a href="#/demo13">v-bind 的绑定顺序</a>
+    <a href="#/demo14">v-on.native修饰符移除</a>
+    <a href="#/demo15">v-for中的ref属性</a>
+    <a href="#/demo16">函数式组件</a>
   </div>
 </template>
 
