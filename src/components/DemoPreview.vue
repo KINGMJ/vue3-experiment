@@ -19,6 +19,7 @@
     <a href="#/demo14">v-on.native修饰符移除</a>
     <a href="#/demo15">v-for中的ref属性</a>
     <a href="#/demo16">函数式组件</a>
+    <a href="#/demo17">异步组件</a>
   </div>
 </template>
 
