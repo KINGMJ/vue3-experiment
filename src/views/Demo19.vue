@@ -2,7 +2,7 @@
   <component-1 />
 </template>
 
-<script lang="ts">
+<script>
 import Component1 from '@/components/demo19/component1'
 import { defineComponent } from 'vue'
 export default defineComponent({

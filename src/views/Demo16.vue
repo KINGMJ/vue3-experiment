@@ -4,10 +4,10 @@
   </dynamic-heading>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from 'vue'
 
-import DynamicHeading from '@/components/demo16/dynamicHeading.js'
+import DynamicHeading from '@/components/demo16/dynamicHeading'
 
 export default defineComponent({
   components: {

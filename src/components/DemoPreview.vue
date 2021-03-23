@@ -20,6 +20,8 @@
     <a href="#/demo15">v-for中的ref属性</a>
     <a href="#/demo16">函数式组件</a>
     <a href="#/demo17">异步组件</a>
+    <a href="#/demo18">emits选项</a>
+    <a href="#/demo19">h函数</a>
   </div>
 </template>
 
