@@ -5,7 +5,6 @@
  * @returns
  */
 export function handleKeyBoard(e: KeyboardEvent, handle: Function) {
-  console.log(e)
   if (e.keyCode === 229) {
     return
   }

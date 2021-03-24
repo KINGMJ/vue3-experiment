@@ -1,5 +1,6 @@
 <template>
   <input v-model="input" placeholder="请输入内容" @keydown.enter="handleKeyBoard($event, handleEnter)" />
+  <input v-model="input" placeholder="请输入内容" @keydown.enter.exact="handleKeyBoard($event, handleEnter)" />
 </template>
 
 <script lang="ts">
