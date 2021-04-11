@@ -22,6 +22,8 @@
     <a href="#/demo17">异步组件</a>
     <a href="#/demo18">emits选项</a>
     <a href="#/demo19">h函数</a>
+    <h3>与React的差异性测试</h3>
+    <a href="#/demo21">事件传递</a>
     <h3>其他功能</h3>
     <a href="#/demo20">事件处理</a>
   </div>
