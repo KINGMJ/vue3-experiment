@@ -26,6 +26,8 @@
     <a href="#/demo21">事件传递</a>
     <h3>其他功能</h3>
     <a href="#/demo20">事件处理</a>
+    <a href="#/demo22">key作为props传递在子组件中获取不到值</a>
+    <a href="#/demo23">使用reactive作为状态管理</a>
   </div>
 </template>
 

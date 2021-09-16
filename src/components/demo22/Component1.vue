@@ -16,6 +16,11 @@ export default {
     return {
       name: 'jack'
     }
+  },
+
+  mounted() {
+    console.log(this.key)
+    console.log(this.id)
   }
 }
 </script>
