@@ -4,10 +4,13 @@
 
 <script>
 import { mutations } from '../../composition/_test_store'
+import useTestState from '../../composition/_test_store2'
 export default {
   name: 'Component1',
   setup() {
+    const { loadMusic } = useTestState()
     mutations.loadPerson()
+    loadMusic()
   }
 }
 </script>
