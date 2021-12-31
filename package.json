@@ -52,7 +52,9 @@
       "vue/no-v-for-template-key": "off",
       "vue/no-v-html": "off",
       "vue/require-prop-types": "off",
-      "vue/require-v-for-key": "off"
+      "vue/require-v-for-key": "off",
+      "vue/no-unused-components": "off",
+      "no-unused-vars": "off"
     }
   },
   "browserslist": [
