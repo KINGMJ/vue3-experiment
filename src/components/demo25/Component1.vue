@@ -1,7 +1,9 @@
 <template>
-  <p v-for="item in items">
-    {{ item.name }}
-  </p>
+  <ul>
+    <li v-for="(item, index) in items" :key="index"><input type="checkbox"/>{{ item.name }}</li>
+  </ul>
+
+  <button @click="changeItems">改变item</button>
 </template>
 
 <script lang="ts">
@@ -15,10 +17,16 @@ export default defineComponent({
         { id: 3, name: 'rose' }
       ]
     }
+  },
+
+  methods: {
+    changeItems() {
+      this.items.reverse()
+    }
   }
 })
 </script>
 
 <!--
-利用 is 属性进行子组件的选择
+v-for 为什么要用 key，以及 key为什么不能为 index：在上面例子中如果不这么做，checkbox选中的值改变顺序后没有跟着改变
 -->
