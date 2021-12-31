@@ -4,6 +4,7 @@
     <h3>Vue 基本特性</h3>
     <a href="#/demo24">computed的get和set方法</a>
     <a href="#/demo25">v-for的使用</a>
+    <a href="#/demo26">插槽</a>
     <h3>Vue3 新特性</h3>
     <a href="#/demo1">defineComponent的使用</a>
     <a href="#/demo2">reactive与toRefs</a>
