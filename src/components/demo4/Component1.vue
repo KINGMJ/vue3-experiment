@@ -3,41 +3,75 @@
     Count is: {{ state.count }}, double is: {{ state.double }}, treble is:
     {{ treble }}
   </div>
-  <button @click="increment">+</button>
+
+  <p v-for="person in readPersons">{{ person.name }}: {{ person.age }}</p>
+  <button @click="increment">+</button> &nbsp;
+  <button @click="changePerson">修改</button>
+
+  <h2>{{ title }}</h2>
 </template>
 
 <script>
-import { reactive, computed, watchEffect, defineComponent } from "vue";
+import { reactive, computed, ref, watchEffect, defineComponent, readonly, isReactive } from 'vue'
 
 export default defineComponent({
-  name: "Component1",
+  name: 'Component1',
   setup() {
     const state = reactive({
       count: 0,
       double: computed(() => state.count * 2),
-    });
+      persons: [
+        { name: 'jack', age: 18 },
+        { name: 'rose', age: 16 }
+      ]
+    })
+
+    const title = ref('这是一个title')
 
     //computed 内部实现了 reactive ，所以这里的 treble 是一个 ref 对象，需要使用 treble.value 来拦截它的值
-    const treble = computed(() => state.count * 3);
+    const treble = computed(() => state.count * 3)
+
+    //readyonly 返回的是一个深层的只读代理
+    const readPersons = readonly(state.persons)
 
     const increment = () => {
-      state.count++;
-    };
+      state.count++
+    }
+
+    const changePerson = () => {
+      readPersons[0].age = 12 //修改不了
+      state.persons[0].age = 12 //可以深层响应
+    }
 
     watchEffect(() => {
-      console.group("wtachEffect");
-      console.log(state.double);
-      console.log(treble.value);
-      console.groupEnd();
-    });
+      console.group('wtachEffect')
+      console.log(state.double)
+      console.log(treble.value)
+
+      //返回类型
+      console.log(treble) //ComputedRefImpl
+      console.log(title) //RefImpl
+      console.log(state) //Proxy
+      console.log(readPersons) //Proxy
+
+      //isReactive检测reactive创建的响应式代理，readonly包裹了由reactive创建的代理，也会返回true
+      console.log(isReactive(state)) //true
+      console.log(isReactive(readPersons)) //true
+      console.log(isReactive(title)) //false
+      console.log(isReactive(treble)) //false
+      console.groupEnd()
+    })
 
     return {
       state,
-      increment,
       treble,
-    };
-  },
-});
+      readPersons,
+      title,
+      changePerson,
+      increment
+    }
+  }
+})
 </script>
 
 <!--

@@ -1,22 +1,23 @@
 <template>
-  <component1 />
-  <component2 />
-  <component-3 title="组件3" />
+  <component :is="child" />
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
+import { computed, defineComponent } from 'vue'
+import Component1 from '@/components/demo4/Component1.vue'
+import Component2 from '@/components/demo4/Component2.vue'
+import Component3 from '@/components/demo4/Component3.vue'
+import Component4 from '@/components/demo4/Component4.vue'
 
-import Component1 from "../components/demo4/Component1.vue";
-import Component2 from "../components/demo4/Component2.vue";
-import Component3 from "../components/demo4/Component3.vue";
-
-@Options({
-  components: {
-    Component1,
-    Component2,
-    Component3,
-  },
+export default defineComponent({
+  components: { Component1, Component2, Component3, Component4 },
+  setup() {
+    const child = computed(() => {
+      return 'Component4'
+    })
+    return {
+      child
+    }
+  }
 })
-export default class Demo1 extends Vue {}
 </script>
