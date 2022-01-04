@@ -16,6 +16,7 @@
     <a href="#/demo7">keep-alive的onActived和onDeactived钩子</a>
     <a href="#/demo8">teleport</a>
     <a href="#/demo9">fragments</a>
+    <a href="#/demo28">响应式原理</a>
     <h3>功能变更</h3>
     <a href="#/demo10">v-model</a>
     <a href="#/demo11">v-model修饰符</a>
